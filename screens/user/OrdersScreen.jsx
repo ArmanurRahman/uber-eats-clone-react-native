@@ -1,14 +1,14 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
 
-const SearchFoodScreen = (props) => {
+const OrderScreen = (props) => {
     return (
         <View>
-            <Text>Search page</Text>
+            <Text>Order page</Text>
         </View>
     );
 };
 
 const styles = StyleSheet.create();
 
-export default SearchFoodScreen;
+export default OrderScreen;
