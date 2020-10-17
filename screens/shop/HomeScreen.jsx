@@ -1,10 +1,12 @@
 import React from "react";
 import { View, Text, StyleSheet } from "react-native";
+import Banner from "../../conponents/Baner";
+import { dummyData } from "../../data/banner-data";
 
 const HomeScreen = (props) => {
     return (
         <View>
-            <Text>Home page</Text>
+            <Banner data={dummyData} />
         </View>
     );
 };
