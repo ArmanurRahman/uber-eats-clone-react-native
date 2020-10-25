@@ -1,16 +1,22 @@
 import React from "react";
-import { View, Text, StyleSheet } from "react-native";
+import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Banner from "../../conponents/Baner";
 import { dummyData } from "../../data/banner-data";
+import SlideOptions from "../../conponents/SlideOptions";
 
 const HomeScreen = (props) => {
     return (
-        <View>
+        <ScrollView style={styles.screen}>
             <Banner data={dummyData} />
-        </View>
+            <SlideOptions />
+        </ScrollView>
     );
 };
 
-const styles = StyleSheet.create();
+const styles = StyleSheet.create({
+    screen: {
+        backgroundColor: "white",
+    },
+});
 
 export default HomeScreen;

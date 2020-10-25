@@ -16,7 +16,7 @@ function infiniteScroll(dataList, slide) {
     let scrolledValue = 0;
     let scrolled = 0;
 
-    const interval = setInterval(() => {
+    setInterval(() => {
         scrolled++;
         if (scrolled < numberOfData) {
             scrolledValue = scrolledValue + width;
@@ -31,8 +31,6 @@ function infiniteScroll(dataList, slide) {
             });
         }
     }, 3000);
-
-    //clearInterval(interval);
 }
 
 const Banner = ({ data }) => {
