@@ -1,5 +1,5 @@
 import React from "react";
-import SlideOptionData from "../data/slide-option-data";
+import SlideOptionData from "../../data/slide-option-data";
 import SlideOption from "./SlideOption";
 
 import { View, StyleSheet, ScrollView } from "react-native";

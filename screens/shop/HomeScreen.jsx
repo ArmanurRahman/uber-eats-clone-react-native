@@ -1,8 +1,8 @@
 import React from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
-import Banner from "../../conponents/Baner";
+import Banner from "../../conponents/Banner/Baner";
 import { dummyData } from "../../data/banner-data";
-import SlideOptions from "../../conponents/SlideOptions";
+import SlideOptions from "../../conponents/SlideOption/SlideOptions";
 
 const HomeScreen = (props) => {
     return (
