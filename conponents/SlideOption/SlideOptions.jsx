@@ -6,7 +6,7 @@ import { View, StyleSheet, ScrollView } from "react-native";
 
 const SlideOptions = (props) => {
     return (
-        <View>
+        <View style={styles.container}>
             <ScrollView horizontal showsHorizontalScrollIndicator={false}>
                 {SlideOptionData.map((option) => (
                     <SlideOption
@@ -20,6 +20,11 @@ const SlideOptions = (props) => {
     );
 };
 
-const styles = StyleSheet.create();
+const styles = StyleSheet.create({
+    container: {
+        backgroundColor: "white",
+        marginBottom: 10,
+    },
+});
 
 export default SlideOptions;

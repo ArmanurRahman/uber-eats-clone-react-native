@@ -19,10 +19,10 @@ const BannerItem = ({ item }) => {
 const styles = StyleSheet.create({
     cardView: {
         flex: 1,
-        width: width - 20,
+        width: width - 10,
         height: height / 3,
         backgroundColor: "white",
-        margin: 10,
+        margin: 5,
         borderRadius: 10,
         shadowColor: "#000",
         shadowOffset: { width: 0.5, height: 0.5 },
@@ -39,7 +39,7 @@ const styles = StyleSheet.create({
         backgroundColor: "rgba(0,0,0,.5)",
     },
     image: {
-        width: width - 20,
+        width: width - 10,
         height: height / 3,
         borderRadius: 10,
     },
