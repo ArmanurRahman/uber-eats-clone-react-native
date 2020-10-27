@@ -3,7 +3,6 @@ import { View, StyleSheet, Text, ScrollView } from "react-native";
 import Card from "./Card/Card";
 
 const CardHolder = (props) => {
-    console.log(props);
     return (
         <View style={styles.cardHolder}>
             <Text style={styles.legend}>{props.legend}</Text>

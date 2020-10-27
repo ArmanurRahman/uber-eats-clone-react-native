@@ -1,16 +1,18 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { View, Text, StyleSheet, ScrollView } from "react-native";
 import Banner from "../../conponents/Banner/Baner";
 import { dummyData } from "../../data/banner-data";
 import SlideOptions from "../../conponents/SlideOption/SlideOptions";
 import CardHolder from "../../conponents/CardHolder";
 import cardData from "../../data/card-data";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import * as shopActions from "../../store/actions/shop";
 
 const HomeScreen = (props) => {
     const dispatch = useDispatch();
 
+    const availableShops = useSelector((state) => state.shop.shops);
+    console.log(availableShops);
     useEffect(() => {
         dispatch(shopActions.fetchShop());
     }, []);

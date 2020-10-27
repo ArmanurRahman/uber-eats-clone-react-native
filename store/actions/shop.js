@@ -13,11 +13,6 @@ export const fetchShop = () => {
             }
 
             const resData = await response.json();
-            console.log(resData);
-            dispatch({
-                type: SET_SHOP,
-                shops: resData,
-            });
 
             const shops = [];
             for (const key in resData) {
@@ -31,6 +26,10 @@ export const fetchShop = () => {
                     )
                 );
             }
+            dispatch({
+                type: SET_SHOP,
+                shops: shops,
+            });
         } catch (err) {
             throw err;
         }
