@@ -22,7 +22,7 @@ export const fetchShop = () => {
                         resData[key].address,
                         resData[key].deliveryFee,
                         resData[key].category,
-                        resData[key].deliveryTome
+                        resData[key].deliveryTime
                     )
                 );
             }

@@ -22,8 +22,9 @@ const Card = (props) => {
                     <Text style={styles.ratingText}>{props.rating}</Text>
                 </View>
                 <Text style={styles.deliveryFee}>
-                    ${props.deliveryFee} delivery fee
+                    Delivery fee ${props.deliveryFee}
                 </Text>
+                <Text style={styles.deliveryFee}>Price ${props.price}</Text>
                 <Text>{props.other}</Text>
             </View>
         </View>

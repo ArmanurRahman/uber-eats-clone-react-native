@@ -14,8 +14,19 @@ const HomeScreen = (props) => {
 
     const allShops = useSelector((state) => state.shop.shops);
     const allFoods = useSelector((state) => state.food.foods);
+    const userChosenCategory = ["Bangladeshi", "Indian"];
+    let favFood = [];
+    allFoods.forEach((item) => {
+        if (item.category === "Bangladeshi") {
+            const shopInfo = allShops.find(
+                (shop) => shop.shopId === item.shopId
+            );
+            favFood.push({ ...item, ...shopInfo });
+        }
+    });
+
     console.log(allShops);
-    console.log(allFoods);
+    console.log(favFood);
     useEffect(() => {
         dispatch(shopActions.fetchShop());
         dispatch(foodActions.fetchFoods());
@@ -25,7 +36,7 @@ const HomeScreen = (props) => {
             <Banner data={dummyData} />
             <View style={styles.container}>
                 <SlideOptions />
-                <CardHolder legend='Your Favorite' data={cardData} />
+                <CardHolder legend='Your Favorite' data={favFood} />
             </View>
         </ScrollView>
     );

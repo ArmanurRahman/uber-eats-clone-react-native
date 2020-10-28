@@ -9,7 +9,7 @@ const CardHolder = (props) => {
             <ScrollView horizontal style={styles.container}>
                 {props.data.map((item) => (
                     <Card
-                        key={item.shopCode + item.mealId}
+                        key={item.foodId}
                         imageUrl={item.imageUrl}
                         shopName={item.shopName}
                         category={item.category}
@@ -17,6 +17,7 @@ const CardHolder = (props) => {
                         rating={item.rating}
                         deliveryFee={item.deliveryFee}
                         other={item.other}
+                        price={item.price}
                     />
                 ))}
             </ScrollView>

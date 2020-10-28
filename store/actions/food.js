@@ -22,7 +22,8 @@ export const fetchFoods = () => {
                         resData[key].price,
                         resData[key].rating,
                         resData[key].description,
-                        resData[key].title
+                        resData[key].title,
+                        resData[key].shop
                     )
                 );
             }
