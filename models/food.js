@@ -7,7 +7,8 @@ class Food {
         rating,
         description,
         title,
-        shopId
+        shopId,
+        arriveDate
     ) {
         this.foodId = foodId;
         this.category = category;
@@ -17,6 +18,7 @@ class Food {
         this.description = description;
         this.title = title;
         this.shopId = shopId;
+        this.arriveDate = arriveDate;
     }
 }
 

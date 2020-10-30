@@ -6,7 +6,11 @@ const CardHolder = (props) => {
     return (
         <View style={styles.cardHolder}>
             <Text style={styles.legend}>{props.legend}</Text>
-            <ScrollView horizontal style={styles.container}>
+            <ScrollView
+                horizontal
+                style={styles.container}
+                showsHorizontalScrollIndicator={false}
+            >
                 {props.data.map((item) => (
                     <Card
                         key={item.foodId}
