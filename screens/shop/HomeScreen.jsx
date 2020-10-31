@@ -81,8 +81,14 @@ const HomeScreen = (props) => {
 const styles = StyleSheet.create({
     screen: {
         backgroundColor: "#ededed",
+        marginTop: 25,
     },
     container: {},
 });
 
+export const ScreenOptions = (navData) => {
+    return {
+        headerTitle: "Home",
+    };
+};
 export default HomeScreen;

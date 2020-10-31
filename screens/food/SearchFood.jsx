@@ -1,7 +1,8 @@
 import React from "react";
-import { View, Text, StyleSheet, Image, FlatList } from "react-native";
+import { View, Text, StyleSheet, FlatList } from "react-native";
 import slideOptionData from "../../data/slide-option-data";
 import SearchGridTile from "../../conponents/SearchGridTile";
+import Input from "../../conponents/UI/Input";
 
 const SearchFoodScreen = (props) => {
     const renderItem = (itemDate) => {
@@ -16,6 +17,7 @@ const SearchFoodScreen = (props) => {
     };
     return (
         <View>
+            <Input label='Search' />
             <FlatList
                 data={slideOptionData}
                 keyExtractor={(item, index) => item.title}
@@ -28,10 +30,16 @@ const SearchFoodScreen = (props) => {
 
 const styles = StyleSheet.create({
     screen: {
+        //marginTop: 25,
         flex: 1,
         justifyContent: "center",
         alignItems: "center",
     },
 });
 
+export const ScreenOptions = (navData) => {
+    return {
+        headerTitle: "Search",
+    };
+};
 export default SearchFoodScreen;

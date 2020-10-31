@@ -18,7 +18,7 @@ const SearchGridTile = (props) => {
     }
 
     return (
-        <View>
+        <View style={styles.gridItem}>
             <TouchableComponent style={{ flex: 1 }} onPress={() => {}}>
                 <View style={styles.container}>
                     <Image
@@ -34,8 +34,8 @@ const SearchGridTile = (props) => {
 
 const styles = StyleSheet.create({
     gridItem: {
-        margin: 15,
-        height: width / 2 - 10,
+        margin: 10,
+        //height: width / 2 - 10,
     },
     container: {
         borderRadius: 10,

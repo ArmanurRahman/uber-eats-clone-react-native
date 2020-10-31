@@ -1,10 +1,14 @@
 import { createStackNavigator } from "@react-navigation/stack";
 import React from "react";
 import { Platform } from "react-native";
-import HomeScreen from "../screens/shop/HomeScreen";
+import HomeScreen, {
+    ScreenOptions as HomeScreenOptions,
+} from "../screens/shop/HomeScreen";
 import { createBottomTabNavigator } from "@react-navigation/bottom-tabs";
 import { Ionicons } from "@expo/vector-icons";
-import SearchFoorScreen from "../screens/food/SearchFood";
+import SearchFoorScreen, {
+    ScreenOptions as SearchScreenOptions,
+} from "../screens/food/SearchFood";
 import OrderScreen from "../screens/user/OrdersScreen";
 import AccountScreen from "../screens/user/AccountScreen";
 import EatPassScreen from "../screens/other/EatPassScreen";
@@ -14,14 +18,21 @@ const defaultHeaderOptions = {
         backgroundColor: {},
     },
 };
+
+const defaultScreenHeaderOptions = {
+    headerShown: false,
+};
 const ShopStackNavigator = createStackNavigator();
 
 export const ShopNavigator = () => {
     return (
-        <ShopStackNavigator.Navigator>
+        <ShopStackNavigator.Navigator
+            screenOptions={defaultScreenHeaderOptions}
+        >
             <ShopStackNavigator.Screen
                 name='HomeScreen'
                 component={HomeScreen}
+                options={HomeScreenOptions}
             />
         </ShopStackNavigator.Navigator>
     );
@@ -31,10 +42,13 @@ const SearchStackNavigator = createStackNavigator();
 
 export const SearchNavigator = () => {
     return (
-        <SearchStackNavigator.Navigator>
+        <SearchStackNavigator.Navigator
+            screenOptions={defaultScreenHeaderOptions}
+        >
             <SearchStackNavigator.Screen
-                name='HomeScreen'
+                name='SearchScreen'
                 component={SearchFoorScreen}
+                options={SearchScreenOptions}
             />
         </SearchStackNavigator.Navigator>
     );
@@ -46,7 +60,7 @@ export const OrderNavigator = () => {
     return (
         <OrderStackNavigator.Navigator>
             <OrderStackNavigator.Screen
-                name='HomeScreen'
+                name='OrderScreen'
                 component={OrderScreen}
             />
         </OrderStackNavigator.Navigator>
@@ -59,7 +73,7 @@ export const AccountNavigator = () => {
     return (
         <AccountStackNavigator.Navigator>
             <AccountStackNavigator.Screen
-                name='HomeScreen'
+                name='AccountScreen'
                 component={AccountScreen}
             />
         </AccountStackNavigator.Navigator>
@@ -72,7 +86,7 @@ export const EatPassNavigator = () => {
     return (
         <EatPassStackNavigator.Navigator>
             <EatPassStackNavigator.Screen
-                name='HomeScreen'
+                name='EatPassScreen'
                 component={EatPassScreen}
             />
         </EatPassStackNavigator.Navigator>
